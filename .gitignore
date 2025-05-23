@@ -2,7 +2,7 @@
 node_modules/
 dist/
 .angular/
-frontend/
+
 
 # Python
 __pycache__/
