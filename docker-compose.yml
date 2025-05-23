@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # Backend - Spring Boot
+  app:
+    build:
+      context: ./backend
+    container_name: crud-springboot
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb+srv://miltonfsjunior:SAgKAXYltWWCNy8H@cluster0.datgvgs.mongodb.net/sdd_crud?retryWrites=true&w=majority
+    networks:
+      - app-network
+
+  # Frontend - Angular com Nginx configurado para redirecionar /api para o backend
+  frontend:
+    build:
+      context: ./frontend
+    container_name: angular-app
+    ports:
+      - "4200:80"
+    depends_on:
+      - app
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
