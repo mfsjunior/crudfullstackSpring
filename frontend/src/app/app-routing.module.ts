@@ -3,12 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { PessoasComponent } from './pessoas/pessoas.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'pessoas', pathMatch: 'full' },
-  { path: 'pessoas', component: PessoasComponent }
+  { path: 'pessoas', component: PessoasComponent },
+  { path: '', redirectTo: 'pessoas', pathMatch: 'full' }, // opcional: rota padrão
+  { path: '**', redirectTo: '' } // opcional: fallback
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

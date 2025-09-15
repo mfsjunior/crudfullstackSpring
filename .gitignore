@@ -1,24 +1,86 @@
-# Node
-node_modules/
-dist/
-.angular/
+# Arquivos de build / dependências
+/node_modules/
+/frontend/node_modules/
+/frontend/dist/
+/frontend/out-tsc/
+/backend/target/
+/backend/.mvn/
+/**/build/
+/**/dist/
 
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.env
-venv/
-
-# Docker
-*.log
-
-# VSCode
+# IDEs / sistema
 .vscode/
-
-# System
+.idea/
+*.iml
+*.log
 .DS_Store
 Thumbs.db
-docker-compose.yml
+desktop.ini
+
+# Docker
+docker-compose.override.yml
+docker-compose.*.yml
+**/Dockerfile.build
+/docker/*.tar
+/.docker/
+
+# Arquivos de ambiente / segredos (não commitar credenciais)
+.env
+**/*.env
+*.local
+*.secret
+*.key
+*.pem
+secrets.* 
+credentials.*
+
+# Configurações sensíveis / geradas
+*.jks
+*.p12
+application-*.properties
+*.keystore
+
+# Bancos/arquivos grandes
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+*.tar
+*.tar.gz
+*.zip
+*.rar
+*.7z
+*.iso
+*.mp4
+*.mov
+*.mkv
+*.exe
+*.dll
+*.bin
+
+# Node / Angular / TypeScript artifacts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+package-lock.json
+
+# Cachês e arquivos temporários
+*.tmp
+*.temp
+*.swp
+*.swo
+*.cache
+.cache/
+tmp/
+temp/
+
+# Logs do Docker / CI que podem crescer
+*.log
+logs/
+ci-artifacts/
+
+# Evite ignorar arquivos de configuração necessários pelo projeto.
+# Se quiser versionar um exemplo de configuração, mantenha um arquivo de exemplo:
+# application.properties.example

@@ -2,6 +2,7 @@ package com.exemplo.crudmongo.service;
 
 import com.exemplo.crudmongo.Model.Pessoa;
 import com.exemplo.crudmongo.repository.PessoaRepository;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,13 +14,14 @@ import java.util.List;
 public class PessoaService {
 
     private final PessoaRepository repository; // Repositório para acesso ao banco de dados
-
+    
     /**
      * Injeta o repositório PessoaRepository via construtor.
      */
     public PessoaService(PessoaRepository repository) {
         this.repository = repository;
     }
+
 
     /**
      * Retorna todas as pessoas cadastradas no banco de dados.

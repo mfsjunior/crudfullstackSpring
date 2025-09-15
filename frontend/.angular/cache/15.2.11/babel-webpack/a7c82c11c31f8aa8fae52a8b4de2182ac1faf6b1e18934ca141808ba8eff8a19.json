@@ -1,0 +1,1 @@
+{"ast":null,"code":"\"use strict\";\n\nexports.__esModule = true;\nvar __NgCli_bootstrap_1 = require(\"@angular/platform-browser\");\nvar app_module_1 = require(\"./app/app.module\");\n__NgCli_bootstrap_1.platformBrowser().bootstrapModule(app_module_1.AppModule);","map":null,"metadata":{},"sourceType":"script","externalDependencies":[]}
