@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - SPRING_DATA_MONGODB_URI=mongodb+srv://miltonfsjunior:DWo7hrFdO7NCIqS8@cluster0.datgvgs.mongodb.net/sdd_crud?retryWrites=true&w=majority
+      - SPRING_DATA_MONGODB_URI=mongodb+srv://usuariodobanco:senha@cluster0.datgvgs.mongodb.net/nomedobanco?retryWrites=true&w=majority
 
     networks:
       - app-network
